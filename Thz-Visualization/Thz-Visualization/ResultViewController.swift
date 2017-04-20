@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Charts
 
-class ResultViewController: UIViewController{
+class ResultViewController: UIViewController,ChartViewDelegate{
+    
+    @IBOutlet weak var lineChartView: LineChartView!
+    
     var messageString : Int!{
         didSet (old){
-            self.refreshUI(messageString)
+            //self.refreshUI(messageString)
         }
     }
     
@@ -20,6 +24,13 @@ class ResultViewController: UIViewController{
         self.splitViewController?.delegate = self
         //self.refreshUI()
     }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        print(entry.x)
+        print(entry.y)
+    }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         if CoreDataFake.shared.resultsV.count <= 0{
@@ -46,12 +57,43 @@ class ResultViewController: UIViewController{
 //MARK: - Set Chart
 extension ResultViewController{
     fileprivate func setChart(_ index:Int){
+        var series = [ChartDataEntry]()
+        let vd = CoreDataFake.shared.resultsV[index]
         
-//        let vd = CoreDataFake.shared.resultsV[index]
-//        for i in 0..<vd.csr!.flux!.count{
-//            let x = vd.csr!.frequency![i]
-//            let y = vd.csr!.flux![i]
-//        }
+        for i in 0..<vd.isr!.flux!.count{
+            let x = vd.isr!.frequency![i]
+            let y = vd.isr!.flux![i]
+            let ySeries = ChartDataEntry(x: Double(x), y: y)
+            series.append(ySeries)
+        }
+        
+
+        
+        let data = LineChartData()
+        let dataset = LineChartDataSet(values: series, label: "CSR")
+        dataset.colors = [NSUIColor.red]
+        dataset.highlightEnabled = true
+        dataset.drawCirclesEnabled = false
+        dataset.circleHoleColor = UIColor.blue
+        dataset.setDrawHighlightIndicators(true)
+        data.addDataSet(dataset)
+        
+        self.lineChartView.data = data
+        self.lineChartView.gridBackgroundColor = NSUIColor.yellow
+        self.lineChartView.xAxis.drawGridLinesEnabled = true
+        self.lineChartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        self.lineChartView.chartDescription?.text = "Resultado"
+        self.lineChartView.delegate = self
+        
+        let marker = BalloonMarker(color: UIColor.red, font: UIFont(name: "Arial", size: 12)!, textColor: UIColor.black, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
+        
+        marker.chartView = self.lineChartView
+        marker.minimumSize = CGSize(width: 80, height: 80)
+        self.lineChartView.marker = marker
+        
+
+        
+        self.lineChartView.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
     }
 }
 

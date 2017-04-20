@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6we-bz-OhR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6we-bz-OhR">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -37,7 +37,19 @@
                     <view key="view" contentMode="scaleToFill" id="hKg-Se-kfC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fm6-8n-sX5" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="72" width="1024" height="1294"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gIN-S0-rg7" firstAttribute="top" secondItem="Fm6-8n-sX5" secondAttribute="bottom" id="Cxd-Kf-Kj9"/>
+                            <constraint firstItem="Fm6-8n-sX5" firstAttribute="top" secondItem="qim-wc-6cf" secondAttribute="bottom" constant="8" id="HoY-f8-pEX"/>
+                            <constraint firstAttribute="trailing" secondItem="Fm6-8n-sX5" secondAttribute="trailing" id="nwZ-Vk-08Q"/>
+                            <constraint firstItem="Fm6-8n-sX5" firstAttribute="leading" secondItem="hKg-Se-kfC" secondAttribute="leading" id="x9a-M8-eIn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Resultados" id="zbt-Hn-ahJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l0X-2C-3u8">
@@ -47,6 +59,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lineChartView" destination="Fm6-8n-sX5" id="KPb-ZS-yiR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yo9-7T-dgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +79,7 @@
                             <tableViewSection headerTitle="Dados da Amostra" id="cNc-0q-AgK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="kdS-nS-mYB">
-                                        <rect key="frame" x="0.0" y="56" width="1024" height="53"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="1024" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kdS-nS-mYB" id="phQ-c1-KDR">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="53"/>
@@ -118,7 +133,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="zY2-gh-QZu">
-                                        <rect key="frame" x="0.0" y="109" width="1024" height="53"/>
+                                        <rect key="frame" x="0.0" y="108.5" width="1024" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zY2-gh-QZu" id="FKn-gB-cx0">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="53"/>
@@ -176,7 +191,7 @@
                             <tableViewSection headerTitle="Informações Complementares" footerTitle="" id="hlc-cw-h41">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="SYT-P5-O9k">
-                                        <rect key="frame" x="0.0" y="226" width="1024" height="53"/>
+                                        <rect key="frame" x="0.0" y="225" width="1024" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SYT-P5-O9k" id="nX4-F8-F6g">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="53"/>
@@ -234,7 +249,7 @@
                             <tableViewSection headerTitle="Data da Amostra" footerTitle="" id="hZ2-fl-NfS">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="244" id="bfg-v8-gLL">
-                                        <rect key="frame" x="0.0" y="343" width="1024" height="244"/>
+                                        <rect key="frame" x="0.0" y="341.5" width="1024" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bfg-v8-gLL" id="gNI-Gy-S20">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="244"/>
@@ -293,7 +308,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Yp-4d-AZs" id="zj6-4x-2jv">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFN-jt-9dw">

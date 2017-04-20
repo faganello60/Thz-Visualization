@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A000473EA8E68B8BC81A89E75686D0C"
+               BlueprintIdentifier = "862D4E8A7BC7803C8142A3583FCCBB22"
                BuildableName = "Pods_Thz_Visualization.framework"
                BlueprintName = "Pods-Thz-Visualization"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3A000473EA8E68B8BC81A89E75686D0C"
+            BlueprintIdentifier = "862D4E8A7BC7803C8142A3583FCCBB22"
             BuildableName = "Pods_Thz_Visualization.framework"
             BlueprintName = "Pods-Thz-Visualization"
             ReferencedContainer = "container:Pods.xcodeproj">

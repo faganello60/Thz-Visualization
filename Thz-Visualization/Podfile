@@ -8,7 +8,7 @@ target 'Thz-Visualization' do
   # Pods for Thz-Visualization
 
 	pod 'Alamofire', '~> 4.3'
-	pod 'SwiftCharts', '~> 0.5'
    	pod 'SkyFloatingLabelTextField', '~> 2.0.0'
 	pod 'AlamofireObjectMapper', '~> 4.0'
+	pod 'Charts'
 end

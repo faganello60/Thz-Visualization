@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,25 +34,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftCharts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17124F06BB50B69375F98F9E19CB9437</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A000473EA8E68B8BC81A89E75686D0C</key>
+		<key>862D4E8A7BC7803C8142A3583FCCBB22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D81328A8275709CA26FCF75E93BDF0C3</key>
+		<key>A8305EF46453F5F5AFA60A553A610866</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F307B842FF76B2DE6C55DB67C0885325</key>
 		<dict>
 			<key>primary</key>
 			<true/>

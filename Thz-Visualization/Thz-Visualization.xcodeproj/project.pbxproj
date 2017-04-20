@@ -20,6 +20,7 @@
 		E48F58261E5A890C0003E53D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48F58241E5A890C0003E53D /* LaunchScreen.storyboard */; };
 		E49566DE1E70375C0052BC9E /* CoreDataFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49566DD1E70375C0052BC9E /* CoreDataFake.swift */; };
 		E4A553911E684AD000242D2A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A553901E684AD000242D2A /* APIManager.swift */; };
+		E4DD8AE81E8EC42A003206E4 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DD8AE71E8EC42A003206E4 /* BalloonMarker.swift */; };
 		E4E7CC0A1E5B1254007DD6CF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7CC091E5B1254007DD6CF /* ResultViewController.swift */; };
 		E4E7CC0C1E5B13A8007DD6CF /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7CC0B1E5B13A8007DD6CF /* HistoricViewController.swift */; };
 		E4E7CC0E1E5B33A8007DD6CF /* CreateResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7CC0D1E5B33A8007DD6CF /* CreateResultViewController.swift */; };
@@ -43,6 +44,7 @@
 		E48F58271E5A890C0003E53D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49566DD1E70375C0052BC9E /* CoreDataFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFake.swift; sourceTree = "<group>"; };
 		E4A553901E684AD000242D2A /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E4DD8AE71E8EC42A003206E4 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		E4E7CC091E5B1254007DD6CF /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E4E7CC0B1E5B13A8007DD6CF /* HistoricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
 		E4E7CC0D1E5B33A8007DD6CF /* CreateResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateResultViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		E42C3B041E6D9C7800F1DB63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4DD8AE71E8EC42A003206E4 /* BalloonMarker.swift */,
 				E49566DD1E70375C0052BC9E /* CoreDataFake.swift */,
 				E42C3B051E6D9E4C00F1DB63 /* VisualizationData.swift */,
 				E42C3B021E6D9C5200F1DB63 /* CSR.swift */,
@@ -294,6 +297,7 @@
 				E48F58191E5A890C0003E53D /* AppDelegate.swift in Sources */,
 				E42C3B031E6D9C5200F1DB63 /* CSR.swift in Sources */,
 				E4E7CC0E1E5B33A8007DD6CF /* CreateResultViewController.swift in Sources */,
+				E4DD8AE81E8EC42A003206E4 /* BalloonMarker.swift in Sources */,
 				E48F58211E5A890C0003E53D /* Thz_Visualization.xcdatamodeld in Sources */,
 				E42C3AFF1E6D9BE900F1DB63 /* ISR.swift in Sources */,
 				E41195141E5C6DA0006A5FAE /* HistoricDelegate.swift in Sources */,

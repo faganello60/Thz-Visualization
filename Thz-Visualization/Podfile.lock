@@ -3,23 +3,25 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - ObjectMapper (2.2.2)
   - SkyFloatingLabelTextField (2.0.1)
-  - SwiftCharts (0.5.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - AlamofireObjectMapper (~> 4.0)
+  - Charts
   - SkyFloatingLabelTextField (~> 2.0.0)
-  - SwiftCharts (~> 0.5)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   SkyFloatingLabelTextField: 070e749632ffd608d6fd9db3fa488a822524997c
-  SwiftCharts: d263289cdc7fc955fef54ae3bc6529f696e69933
 
-PODFILE CHECKSUM: bb574dbc77c79616617405763d8c6e2d05c9df1e
+PODFILE CHECKSUM: 7154bb957efb13d916278c536e2c8a6d08523601
 
 COCOAPODS: 1.2.0
