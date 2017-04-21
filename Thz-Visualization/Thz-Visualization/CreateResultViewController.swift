@@ -24,7 +24,7 @@ class CreateResultViewController: UITableViewController, APIManager{
     }
     
     @IBAction func saveResult(_ sender: Any) {
-        let request = sendRequest("http://localhost:8080/test")
+        let request = sendRequest("http://192.168.1.8:8080/test")
         
         processRequest(dataRequest: request) { [unowned self] (result) in
             CoreDataFake.shared.addVisualization(vd: result)

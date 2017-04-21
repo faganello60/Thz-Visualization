@@ -199,7 +199,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Faga;
 				TargetAttributes = {
 					E48F58141E5A890C0003E53D = {
@@ -426,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA0AF00312A2868BEDBF1142 /* Pods-Thz-Visualization.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HLXHJ99SHK;
 				INFOPLIST_FILE = "Thz-Visualization/Info.plist";
@@ -441,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CF2EEF4E0EBBE7D27BA9A97 /* Pods-Thz-Visualization.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HLXHJ99SHK;
 				INFOPLIST_FILE = "Thz-Visualization/Info.plist";

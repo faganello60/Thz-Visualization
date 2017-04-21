@@ -60,10 +60,24 @@ extension ResultViewController{
         var series = [ChartDataEntry]()
         let vd = CoreDataFake.shared.resultsV[index]
         
-        for i in 0..<vd.isr!.flux!.count{
-            let x = vd.isr!.frequency![i]
-            let y = vd.isr!.flux![i]
-            let ySeries = ChartDataEntry(x: Double(x), y: y)
+        for i in 0..<vd.csr!.flux!.count{
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            numberFormatter.locale = Locale(identifier: "US")
+            let finalNumberX = numberFormatter.number(from: "\(vd.csr!.frequency![i])")
+            let finalNumberY = numberFormatter.number(from: "\(vd.csr!.flux![i])")
+            
+            print("X: \(finalNumberX) - Y: \(finalNumberY)")
+            
+            
+            let x = vd.csr!.frequency![i]
+            let y = vd.csr!.flux![i]
+            
+            guard let x1 = finalNumberX, let y1 = finalNumberY else{
+                continue
+            }
+           
+            let ySeries = ChartDataEntry(x: Double(x1), y: y1 as! Double)
             series.append(ySeries)
         }
         
@@ -73,7 +87,7 @@ extension ResultViewController{
         let dataset = LineChartDataSet(values: series, label: "CSR")
         dataset.colors = [NSUIColor.red]
         dataset.highlightEnabled = true
-        dataset.drawCirclesEnabled = false
+        dataset.drawCirclesEnabled = true
         dataset.circleHoleColor = UIColor.blue
         dataset.setDrawHighlightIndicators(true)
         data.addDataSet(dataset)
