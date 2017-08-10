@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46EEB4F64B892AD1D856E837 /* Pods_Thz_Visualization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7819C9681074C30D98E85D8 /* Pods_Thz_Visualization.framework */; };
+		7E61BAF61F3CB285009B50D3 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61BAF51F3CB285009B50D3 /* Total.swift */; };
 		E41195141E5C6DA0006A5FAE /* HistoricDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41195131E5C6DA0006A5FAE /* HistoricDelegate.swift */; };
 		E41195161E5C8B0D006A5FAE /* DesignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41195151E5C8B0D006A5FAE /* DesignManager.swift */; };
 		E42C3AFF1E6D9BE900F1DB63 /* ISR.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C3AFE1E6D9BE900F1DB63 /* ISR.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1CF2EEF4E0EBBE7D27BA9A97 /* Pods-Thz-Visualization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thz-Visualization.release.xcconfig"; path = "Pods/Target Support Files/Pods-Thz-Visualization/Pods-Thz-Visualization.release.xcconfig"; sourceTree = "<group>"; };
+		7E61BAF51F3CB285009B50D3 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		B7819C9681074C30D98E85D8 /* Pods_Thz_Visualization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thz_Visualization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0AF00312A2868BEDBF1142 /* Pods-Thz-Visualization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thz-Visualization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Thz-Visualization/Pods-Thz-Visualization.debug.xcconfig"; sourceTree = "<group>"; };
 		E41195131E5C6DA0006A5FAE /* HistoricDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				E49566DD1E70375C0052BC9E /* CoreDataFake.swift */,
 				E42C3B051E6D9E4C00F1DB63 /* VisualizationData.swift */,
 				E42C3B021E6D9C5200F1DB63 /* CSR.swift */,
+				7E61BAF51F3CB285009B50D3 /* Total.swift */,
 				E42C3AFE1E6D9BE900F1DB63 /* ISR.swift */,
 			);
 			name = Models;
@@ -253,7 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		55202E3E28952BE70A831930 /* [CP] Copy Pods Resources */ = {
@@ -295,6 +298,7 @@
 			files = (
 				E4A553911E684AD000242D2A /* APIManager.swift in Sources */,
 				E48F58191E5A890C0003E53D /* AppDelegate.swift in Sources */,
+				7E61BAF61F3CB285009B50D3 /* Total.swift in Sources */,
 				E42C3B031E6D9C5200F1DB63 /* CSR.swift in Sources */,
 				E4E7CC0E1E5B33A8007DD6CF /* CreateResultViewController.swift in Sources */,
 				E4DD8AE81E8EC42A003206E4 /* BalloonMarker.swift in Sources */,

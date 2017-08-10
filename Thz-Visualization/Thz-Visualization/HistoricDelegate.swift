@@ -12,3 +12,6 @@ protocol HistoricSelectedDelegate: class {
     func historicSelected(newHistoric: Int)
 }
 
+protocol Reload:class {
+    func reload()
+}

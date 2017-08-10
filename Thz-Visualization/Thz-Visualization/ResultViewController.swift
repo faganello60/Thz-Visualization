@@ -64,20 +64,16 @@ extension ResultViewController{
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
             numberFormatter.locale = Locale(identifier: "US")
-            let finalNumberX = numberFormatter.number(from: "\(vd.csr!.frequency![i])")
-            let finalNumberY = numberFormatter.number(from: "\(vd.csr!.flux![i])")
+            let finalNumberX = numberFormatter.number(from: "\(vd.total!.frequency![i])")
+            let finalNumberY = numberFormatter.number(from: "\(vd.total!.flux![i])")
             
             print("X: \(finalNumberX) - Y: \(finalNumberY)")
-            
-            
-            let x = vd.csr!.frequency![i]
-            let y = vd.csr!.flux![i]
             
             guard let x1 = finalNumberX, let y1 = finalNumberY else{
                 continue
             }
            
-            let ySeries = ChartDataEntry(x: Double(x1), y: y1 as! Double)
+            let ySeries = ChartDataEntry(x: log(Double(x1)), y:log(Double(y1)))
             series.append(ySeries)
         }
         
@@ -99,7 +95,7 @@ extension ResultViewController{
         self.lineChartView.chartDescription?.text = "Resultado"
         self.lineChartView.delegate = self
         
-        let marker = BalloonMarker(color: UIColor.red, font: UIFont(name: "Arial", size: 12)!, textColor: UIColor.black, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
+        let marker = BalloonMarker(color: UIColor.red, font: UIFont(name: "Arial", size: 14)!, textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
         
         marker.chartView = self.lineChartView
         marker.minimumSize = CGSize(width: 80, height: 80)

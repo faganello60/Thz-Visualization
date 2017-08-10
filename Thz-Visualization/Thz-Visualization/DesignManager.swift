@@ -13,8 +13,9 @@ protocol DesignManager: class {}
 extension DesignManager{
     
     func cellDesign(cell:UITableViewCell, indexPath:IndexPath){
+        let color = UIColor.cellColor
         if indexPath.row % 2 == 0{ cell.backgroundColor = UIColor.white }
-        else{ cell.backgroundColor = UIColor.cyan }
+        else{ cell.backgroundColor = color }
     }
     
     func prepareView(window:UIWindow?){
@@ -27,4 +28,9 @@ extension DesignManager{
         masterViewController.delegate = detailViewController
         detailViewController.messageString = 0
     }
+}
+
+
+extension UIColor {
+    static var cellColor: UIColor  { return UIColor(colorLiteralRed: 222/255, green: 205/255, blue: 196/255, alpha: 1)}
 }

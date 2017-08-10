@@ -114,7 +114,9 @@ open class BalloonMarker: MarkerImage
     
     open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
     {
-        setLabel(String(entry.y))
+        let label = "x:\(log(entry.x)) \ny:\(log(entry.y))"
+        
+        setLabel(label)
     }
     
     open func setLabel(_ label: String)

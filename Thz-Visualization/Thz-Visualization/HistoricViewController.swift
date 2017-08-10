@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HistoricViewController: UITableViewController,DesignManager {
+class HistoricViewController: UITableViewController,DesignManager,Reload {
 
     weak var delegate: HistoricSelectedDelegate?
     
@@ -20,8 +20,8 @@ class HistoricViewController: UITableViewController,DesignManager {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func reloadView(){
+
+    func reload(){
         self.tableView.reloadData()
     }
 }
@@ -35,13 +35,14 @@ extension HistoricViewController{
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 33
-        //        return CoreDataFake.shared.resultsV.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {                return CoreDataFake.shared.resultsV.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let obj = CoreDataFake.shared.returnVisualization(indexOfArray: indexPath.row)
+        cell.textLabel?.text = obj.name
+        
         cellDesign(cell: cell, indexPath: indexPath)
         return cell
     }
